@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/Fan_contraller.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/CCP/ccp_cfg.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/Fan_contraller.c</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/ADC/adc.c</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/GPIO/gpio.c</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/GPIO/gpio.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/Interrupt/interrupt_manager.c</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/ECU_layer/LCD/ecu_lcd.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/CCP/ccp.h</file>
+            <file>file:/C:/Program%20Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8/pic/include/proc/pic18f4620.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/ECU_layer/Motor/ecu_motor.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/TIMER2/timer2.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/ECU_layer/Motor/ecu_motor.c</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/Interrupt/interrupt_internal.h</file>
+            <file>file:/C:/Program%20Files/Microchip/xc8/v2.41/pic/sources/c99/common/memset.c</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/ADC/adc.h</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/Interrupt/interrupt_internal.c</file>
+            <file>file:/F:/Embedded%20system/microcontraller%20interfacing/MPLAB%20PROJECTS/Fan_Contraller_System.X/MCAL_layer/Interrupt/interrupt_generate_cfg.h</file>
+        </group>
+    </open-files>
+</project-private>
