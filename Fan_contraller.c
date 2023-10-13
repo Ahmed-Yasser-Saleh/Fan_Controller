@@ -103,34 +103,34 @@ int main() {
          if(lm35_res_celsius < 25)
          {
              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,0);
-             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is Off");
+             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is Off");
              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "            ");
          }
          
          else if(lm35_res_celsius >= 25 && lm35_res_celsius < 40)
          {
              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,25);
-             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "25% Capacity");
          }
          
          else if(lm35_res_celsius >= 40 && lm35_res_celsius < 50)
          {
              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,50);
-             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "50% Capacity");
          }
          else if(lm35_res_celsius >= 50 && lm35_res_celsius < 60)
          {
              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,75);
-             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "75% Capacity ");
          }
          
          else if(lm35_res_celsius >= 60)
          {
              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,100);
-             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+             send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "Full Capacity");
          }
          else{/* NOTHING */}

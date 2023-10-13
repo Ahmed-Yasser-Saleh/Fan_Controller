@@ -633,7 +633,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Fan_contraller.c: 105:              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,0);
 [e = _ret ( _CCP_PWM_Set_Duty (2 , &U _ccp_pwm_obj -> -> 0 `i `uc ]
 "106
-[; ;Fan_contraller.c: 106:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is Off");
+[; ;Fan_contraller.c: 106:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is Off");
 [e ( _send_4_bit_string_data_pos (4 , , , -> &U _lcd_4bit `*CS275 -> -> 2 `i `uc -> -> 1 `i `uc :s 2C ]
 "107
 [; ;Fan_contraller.c: 107:              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "            ");
@@ -653,7 +653,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Fan_contraller.c: 112:              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,25);
 [e = _ret ( _CCP_PWM_Set_Duty (2 , &U _ccp_pwm_obj -> -> 25 `i `uc ]
 "113
-[; ;Fan_contraller.c: 113:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+[; ;Fan_contraller.c: 113:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
 [e ( _send_4_bit_string_data_pos (4 , , , -> &U _lcd_4bit `*CS275 -> -> 2 `i `uc -> -> 1 `i `uc :s 4C ]
 "114
 [; ;Fan_contraller.c: 114:              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "25% Capacity");
@@ -673,7 +673,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Fan_contraller.c: 119:              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,50);
 [e = _ret ( _CCP_PWM_Set_Duty (2 , &U _ccp_pwm_obj -> -> 50 `i `uc ]
 "120
-[; ;Fan_contraller.c: 120:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+[; ;Fan_contraller.c: 120:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
 [e ( _send_4_bit_string_data_pos (4 , , , -> &U _lcd_4bit `*CS275 -> -> 2 `i `uc -> -> 1 `i `uc :s 6C ]
 "121
 [; ;Fan_contraller.c: 121:              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "50% Capacity");
@@ -693,7 +693,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Fan_contraller.c: 125:              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,75);
 [e = _ret ( _CCP_PWM_Set_Duty (2 , &U _ccp_pwm_obj -> -> 75 `i `uc ]
 "126
-[; ;Fan_contraller.c: 126:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+[; ;Fan_contraller.c: 126:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
 [e ( _send_4_bit_string_data_pos (4 , , , -> &U _lcd_4bit `*CS275 -> -> 2 `i `uc -> -> 1 `i `uc :s 8C ]
 "127
 [; ;Fan_contraller.c: 127:              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "75% Capacity ");
@@ -713,7 +713,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Fan_contraller.c: 132:              ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,100);
 [e = _ret ( _CCP_PWM_Set_Duty (2 , &U _ccp_pwm_obj -> -> 100 `i `uc ]
 "133
-[; ;Fan_contraller.c: 133:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Motor Is On ");
+[; ;Fan_contraller.c: 133:              send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
 [e ( _send_4_bit_string_data_pos (4 , , , -> &U _lcd_4bit `*CS275 -> -> 2 `i `uc -> -> 1 `i `uc :s 10C ]
 "134
 [; ;Fan_contraller.c: 134:              send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "Full Capacity");
@@ -791,11 +791,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 11C 70 117 108 108 32 67 97 112 97 99 105 116 121 0 ]
 [a 5C 50 53 37 32 67 97 112 97 99 105 116 121 0 ]
 [a 7C 53 48 37 32 67 97 112 97 99 105 116 121 0 ]
-[a 2C 77 111 116 111 114 32 73 115 32 79 102 102 0 ]
+[a 2C 70 97 110 32 73 115 32 79 102 102 0 ]
 [a 9C 55 53 37 32 67 97 112 97 99 105 116 121 32 0 ]
-[a 4C 77 111 116 111 114 32 73 115 32 79 110 32 0 ]
-[a 6C 77 111 116 111 114 32 73 115 32 79 110 32 0 ]
-[a 8C 77 111 116 111 114 32 73 115 32 79 110 32 0 ]
-[a 10C 77 111 116 111 114 32 73 115 32 79 110 32 0 ]
+[a 4C 70 97 110 32 73 115 32 79 110 32 0 ]
+[a 6C 70 97 110 32 73 115 32 79 110 32 0 ]
+[a 8C 70 97 110 32 73 115 32 79 110 32 0 ]
+[a 10C 70 97 110 32 73 115 32 79 110 32 0 ]
 [a 1C 84 101 109 112 101 114 97 116 117 114 101 32 61 32 0 ]
 [a 3C 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
