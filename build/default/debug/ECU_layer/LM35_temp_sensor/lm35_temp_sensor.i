@@ -1,4 +1,4 @@
-# 1 "Fan_contraller.c"
+# 1 "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,24 +6,16 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Fan_contraller.c" 2
-
-
-
-
-
-
-
-# 1 "./Fan_contraller.h" 1
-# 12 "./Fan_contraller.h"
-# 1 "./ECU_layer/LCD/ecu_lcd.h" 1
-# 11 "./ECU_layer/LCD/ecu_lcd.h"
-# 1 "./ECU_layer/LCD/../../MCAL_layer/GPIO/gpio.h" 1
-# 12 "./ECU_layer/LCD/../../MCAL_layer/GPIO/gpio.h"
-# 1 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../mcal_std_types.h" 1
-# 11 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../mcal_std_types.h"
-# 1 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../std_libraries.h" 1
-# 11 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../std_libraries.h"
+# 1 "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.c" 2
+# 10 "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.c"
+# 1 "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h" 1
+# 12 "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 1
+# 12 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../mcal_std_types.h" 1
+# 11 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../mcal_std_types.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../std_libraries.h" 1
+# 11 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../std_libraries.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdio.h" 1 3
 
 
@@ -188,7 +180,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 11 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../std_libraries.h" 2
+# 11 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../std_libraries.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 1 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdlib.h" 3
@@ -252,7 +244,7 @@ typedef struct { unsigned int quot, rem; } udiv_t;
 typedef struct { unsigned long quot, rem; } uldiv_t;
 udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
-# 12 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../std_libraries.h" 2
+# 12 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../std_libraries.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 3
@@ -311,11 +303,11 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 13 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../std_libraries.h" 2
-# 11 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
+# 13 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../std_libraries.h" 2
+# 11 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../mcal_std_types.h" 2
 
-# 1 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../compiler.h" 1
-# 11 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../compiler.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../compiler.h" 1
+# 11 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../compiler.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4690,9 +4682,9 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 2 3
-# 11 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../compiler.h" 2
-# 12 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
-# 28 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../mcal_std_types.h"
+# 11 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../compiler.h" 2
+# 12 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../mcal_std_types.h" 2
+# 28 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../mcal_std_types.h"
 typedef unsigned char uint8;
 typedef unsigned short uint16;
 typedef unsigned int uint32;
@@ -4701,11 +4693,11 @@ typedef signed short sint16;
 typedef signed int sint32;
 
 typedef uint8 Std_ReturnType;
-# 12 "./ECU_layer/LCD/../../MCAL_layer/GPIO/gpio.h" 2
+# 12 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 2
 
 
-# 1 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../device_config.h" 1
-# 17 "./ECU_layer/LCD/../../MCAL_layer/GPIO/../device_config.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../device_config.h" 1
+# 17 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../device_config.h"
 #pragma config OSC = HS
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
@@ -4759,11 +4751,24 @@ typedef uint8 Std_ReturnType;
 
 
 #pragma config EBTRB = OFF
-# 14 "./ECU_layer/LCD/../../MCAL_layer/GPIO/gpio.h" 2
+# 14 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 2
 
-# 1 "./ECU_layer/LCD/../../MCAL_layer/GPIO/gpio_config.h" 1
-# 15 "./ECU_layer/LCD/../../MCAL_layer/GPIO/gpio.h" 2
-# 32 "./ECU_layer/LCD/../../MCAL_layer/GPIO/gpio.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h" 1
+# 12 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_generate_cfg.h" 1
+# 12 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h" 2
+# 49 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h"
+typedef enum{
+    LOW_PRIORITY,
+    HIGH_PRIORITY
+}interrupt_priority_status;
+# 15 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 2
+
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../GPIO/gpio.h" 1
+# 15 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../GPIO/gpio.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../GPIO/gpio_config.h" 1
+# 15 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../GPIO/gpio.h" 2
+# 32 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../GPIO/gpio.h"
 typedef enum {
     LOW,
     HIGH
@@ -4813,94 +4818,11 @@ Std_ReturnType gpio_port_direction_status (Port_Index_t port, Std_ReturnType *di
 Std_ReturnType gpio_port_write_logic (Port_Index_t port, Std_ReturnType logic);
 Std_ReturnType gpio_port_read_logic (Port_Index_t port, Std_ReturnType *logic);
 Std_ReturnType gpio_port_toggle_logic (Port_Index_t port);
-# 11 "./ECU_layer/LCD/ecu_lcd.h" 2
+# 16 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 2
 
-# 1 "./ECU_layer/LCD/ecu_lcd_confg.h" 1
-# 12 "./ECU_layer/LCD/ecu_lcd.h" 2
-# 37 "./ECU_layer/LCD/ecu_lcd.h"
-typedef struct{
-    Pin_Config_t rs_lcd;
-    Pin_Config_t lcd_pin[8];
-    Pin_Config_t en_lcd;
-}lcd_confg_8_t;
-
-typedef struct{
-    Pin_Config_t rs_lcd;
-    Pin_Config_t lcd_pin[4];
-    Pin_Config_t en_lcd;
-}lcd_confg_4_t;
-
-
-Std_ReturnType lcd_pins_4_initialize(const lcd_confg_4_t *lcd);
-Std_ReturnType send_4_bit_command(const lcd_confg_4_t *lcd, uint8 command);
-Std_ReturnType send_4_bit_char_data(const lcd_confg_4_t *lcd, uint8 data);
-Std_ReturnType send_4_bit_char_data_pos(const lcd_confg_4_t *lcd, uint8 row, uint8 column, uint8 data);
-Std_ReturnType send_4_bit_string_data(const lcd_confg_4_t *lcd,uint8 *data);
-Std_ReturnType send_4_bit_string_data_pos(const lcd_confg_4_t *lcd, uint8 row, uint8 column, uint8 *data);
-Std_ReturnType send_4_bit_custome_char_data_pos(const lcd_confg_4_t *lcd, uint8 row,
-                                          uint8 column, uint8 *arr, uint8 mem_pos);
-
-Std_ReturnType lcd_pins_8_initialize(const lcd_confg_8_t *lcd);
-Std_ReturnType send_8_bit_command(const lcd_confg_8_t *lcd, uint8 command);
-Std_ReturnType send_8_bit_char_data(const lcd_confg_8_t *lcd, uint8 data);
-Std_ReturnType send_8_bit_char_data_pos(const lcd_confg_8_t *lcd, uint8 row, uint8 column, uint8 data);
-Std_ReturnType send_8_bit_string_data(const lcd_confg_8_t *lcd,uint8 *data);
-Std_ReturnType send_8_bit_string_data_pos(const lcd_confg_8_t *lcd, uint8 row, uint8 column, uint8 *data);
-Std_ReturnType send_8_bit_custome_char_data_pos(const lcd_confg_8_t *lcd, uint8 row,
-                                          uint8 column, uint8 *arr, uint8 mem_pos);
-
-
-Std_ReturnType cnvert_uint8_to_string(uint8 value, uint8 *ptr);
-Std_ReturnType cnvert_uint16_to_string(uint16 value, uint8 *ptr);
-Std_ReturnType cnvert_uint32_to_string(uint32 value, uint8 *ptr);
-# 12 "./Fan_contraller.h" 2
-
-# 1 "./ECU_layer/Motor/ecu_motor.h" 1
-# 13 "./ECU_layer/Motor/ecu_motor.h"
-# 1 "./ECU_layer/Motor/ecu_motor_confg.h" 1
-# 13 "./ECU_layer/Motor/ecu_motor.h" 2
-
-
-
-
-
-
-
-typedef enum{
-    MOTOR_OFF,
-    MOTOR_ON
-}motor_st_t;
-
-typedef struct{
-    Pin_Config_t motor_confg[2];
-}motor_confg_t;
-
-
-Std_ReturnType motor_initialize(const motor_confg_t *motor);
-Std_ReturnType motor_move_right(const motor_confg_t *motor);
-Std_ReturnType motor_move_left(const motor_confg_t *motor);
-Std_ReturnType motor_turn_off(const motor_confg_t *motor);
-# 13 "./Fan_contraller.h" 2
-
-# 1 "./ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h" 1
-# 12 "./ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h"
-# 1 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 1
-# 15 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h"
-# 1 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h" 1
-# 12 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h"
-# 1 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_generate_cfg.h" 1
-# 12 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h" 2
-# 49 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_cfg.h"
-typedef enum{
-    LOW_PRIORITY,
-    HIGH_PRIORITY
-}interrupt_priority_status;
-# 15 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 2
-
-
-# 1 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_internal.h" 1
-# 17 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 2
-# 55 "./ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h"
+# 1 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/../Interrupt/interrupt_internal.h" 1
+# 17 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h" 2
+# 55 "ECU_layer/LM35_temp_sensor/../../MCAL_layer/ADC/adc.h"
 typedef enum{
     ADC_CHANNEL_AN0 = 0,
     ADC_CHANNEL_AN1,
@@ -4958,269 +4880,32 @@ Std_ReturnType adc_getconversion_result(adc_confg_t *adc_confg, uint16 *conversi
 Std_ReturnType ADC_GetConversion_Blocking(const adc_confg_t *adc_confg, adc_channel_select_t channel,
                                  uint16 *conversion_result);
 Std_ReturnType ADC_StartConversion_Interrupt( adc_confg_t *adc_confg, adc_channel_select_t channel);
-# 12 "./ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h" 2
+# 12 "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h" 2
 
 
 
 
 
 Std_ReturnType get_temperaturevalue(uint16 *temp_val, uint16 adc_val);
-# 14 "./Fan_contraller.h" 2
+# 10 "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.c" 2
 
 
 
 
 
+Std_ReturnType get_temperaturevalue(uint16 *temp_val, uint16 adc_val){
+    Std_ReturnType ret = (Std_ReturnType)0x01;
+    uint16 pow = 1;
+    uint8 adc_resol = 0x0A;
+    if(((void*)0) == temp_val)
+        ret = (Std_ReturnType)0x00;
+    else{
+        while(adc_resol){
+            pow *= 2;
+            adc_resol--;
+        }
 
-
-void application_initialize(void);
-# 8 "Fan_contraller.c" 2
-
-
-# 1 "./MCAL_layer/CCP/ccp.h" 1
-# 17 "./MCAL_layer/CCP/ccp.h"
-# 1 "./MCAL_layer/CCP/ccp_cfg.h" 1
-# 17 "./MCAL_layer/CCP/ccp.h" 2
-
-
-# 1 "./MCAL_layer/CCP/../TIMER2/timer2.h" 1
-# 30 "./MCAL_layer/CCP/../TIMER2/timer2.h"
-typedef enum{
-    TIMER2_POSTSCALER_DIV_BY_1 = 0,
-    TIMER2_POSTSCALER_DIV_BY_2,
-    TIMER2_POSTSCALER_DIV_BY_3,
-    TIMER2_POSTSCALER_DIV_BY_4,
-    TIMER2_POSTSCALER_DIV_BY_5,
-    TIMER2_POSTSCALER_DIV_BY_6,
-    TIMER2_POSTSCALER_DIV_BY_7,
-    TIMER2_POSTSCALER_DIV_BY_8,
-    TIMER2_POSTSCALER_DIV_BY_9,
-    TIMER2_POSTSCALER_DIV_BY_10,
-    TIMER2_POSTSCALER_DIV_BY_11,
-    TIMER2_POSTSCALER_DIV_BY_12,
-    TIMER2_POSTSCALER_DIV_BY_13,
-    TIMER2_POSTSCALER_DIV_BY_14,
-    TIMER2_POSTSCALER_DIV_BY_15,
-    TIMER2_POSTSCALER_DIV_BY_16,
-}timer2_postscaler_select_t;
-
-typedef enum{
-    TIMER2_PRESCALER_DIV_BY_1 = 0,
-    TIMER2_PRESCALER_DIV_BY_4,
-    TIMER2_PRESCALER_DIV_BY_16
-}timer2_prescaler_select_t;
-
-typedef struct {
-
-    void (*interrupt_timer2)(void);
-
-
-
-
-
-    timer2_prescaler_select_t prescaler_timer2_value;
-    timer2_postscaler_select_t postscaler_timer2_value;
-    uint16 value_start_cnt;
-}Timer2_cfg_t;
-
-
-Std_ReturnType Timer2_init(Timer2_cfg_t *timer2);
-Std_ReturnType Timer2_deinit(Timer2_cfg_t *timer2);
-Std_ReturnType Timer2_write_value(Timer2_cfg_t *timer2, uint8 value);
-Std_ReturnType Timer2_read_value(Timer2_cfg_t *timer2, uint8 *value);
-# 19 "./MCAL_layer/CCP/ccp.h" 2
-# 117 "./MCAL_layer/CCP/ccp.h"
-typedef enum{
-  CAPTURE_MODE_EVERY_FALLING_EDGE,
-  CAPTURE_MODE_EVERY_RISING_EDGE,
-  CAPTURE_MODE_EVERY_4_RISING_EDGE,
-  CAPTURE_MODE_EVERY_16_RISING_EDGE
-}capture_status_t;
-
-typedef enum{
-  TIMER1_CLK_SRC_CCP,
-  TIMER1_CLK_SRC_CCP1_TIMER3_CLK_SOURCE_CCP2,
-  TIMER3_CLK_SRC_CCP
-}capture_compare_clk_source_t;
-
-typedef enum {
- TOGGLE_PIN = 2,
- LOW_PIN = 8,
- HIGH_PIN,
- UNCHANGED_GENERATE_INTERRUPT,
- TRIGGER_EVENT
-}compare_mode_t;
-
-typedef struct{
-    void (*interrupt_ccp1)(void);
-    interrupt_priority_status CCP1_priority;
-
-    void (*interrupt_ccp2)(void);
-    interrupt_priority_status CCP2_priority;
-
-
-
-
-
-
-
-    uint32 pwm_freq;
-    uint8 timer2_prescaler;
-    uint8 timer2_postscaler;
-# 165 "./MCAL_layer/CCP/ccp.h"
-    uint8 ccp_mode_module;
-    uint8 ccp_mode;
-    Pin_Config_t ccp_pin;
-}ccp_confg_t;
-
-
-Std_ReturnType CCP_Init( ccp_confg_t *ccp_obj);
-Std_ReturnType CCP_DeInit( ccp_confg_t *ccp_obj);
-
-
-Std_ReturnType CCP_PWM_Set_Duty( ccp_confg_t *ccp_obj, uint8 duty);
-Std_ReturnType CCP_PWM_Stop( ccp_confg_t *ccp_obj);
-# 10 "Fan_contraller.c" 2
-
-
-
-void adc_interrupt(void);
-
-volatile uint16 lm35_res;
-uint16 lm35_res_celsius;
-uint8 arr_val[6];
-
-lcd_confg_4_t lcd_4bit = {
- .rs_lcd.port = PORTD_INDEX,
- .rs_lcd.pin = PIN2,
- .rs_lcd.direction = OUTPUT,
- .rs_lcd.logic = LOW,
- .en_lcd.port = PORTD_INDEX,
- .en_lcd.pin = PIN3,
- .en_lcd.direction = OUTPUT,
- .en_lcd.logic = LOW,
- .lcd_pin[0].port = PORTD_INDEX,
- .lcd_pin[0].pin = PIN4,
- .lcd_pin[0].direction = OUTPUT,
- .lcd_pin[0].logic = LOW,
- .lcd_pin[1].port = PORTD_INDEX,
- .lcd_pin[1].pin = PIN5,
- .lcd_pin[1].direction = OUTPUT,
- .lcd_pin[1].logic = LOW,
- .lcd_pin[2].port = PORTD_INDEX,
- .lcd_pin[2].pin = PIN6,
- .lcd_pin[2].direction = OUTPUT,
- .lcd_pin[2].logic = LOW,
- .lcd_pin[3].port = PORTD_INDEX,
- .lcd_pin[3].pin = PIN7,
- .lcd_pin[3].direction = OUTPUT,
- .lcd_pin[3].logic = LOW,
- };
-
-motor_confg_t motor = {
-  .motor_confg[0].port = PORTC_INDEX,
-  .motor_confg[0].pin = PIN0,
-  .motor_confg[0].direction = OUTPUT,
-  .motor_confg[0].logic = MOTOR_OFF,
-  .motor_confg[1].port = PORTC_INDEX,
-  .motor_confg[1].pin = PIN1,
-  .motor_confg[1].direction = OUTPUT,
-  .motor_confg[1].logic = MOTOR_OFF
-};
-
-adc_confg_t adc_0 = {
- .internalfun_interrupt = adc_interrupt,
- .adc_pin_confg.port = PORTA_INDEX,
- .adc_pin_confg.pin = PIN0,
- .adc_pin_confg.direction = INPUT,
- .adc_channel = ADC_CHANNEL_AN0,
- .adc_conversion_clock = ADC_CONVERSION_CLOCK_FOSC_DIV_16,
- .adc_acquisition_time = ADC_12_TAD,
- .result_format = 1,
- .voltage_reference = 0
-};
-
-ccp_confg_t ccp_pwm_obj = {
-.interrupt_ccp1 = ((void*)0),
-.ccp_mode = 0x00,
-.ccp_mode_module = 0x02,
-.ccp_pin.port = PORTC_INDEX,
-.ccp_pin.pin = PIN2,
-.ccp_pin.direction = OUTPUT,
-.pwm_freq = 10000,
-.timer2_prescaler = 1,
-.timer2_postscaler = 1
-};
-
-Timer2_cfg_t timer2_obj = {
-.interrupt_timer2 = ((void*)0),
-.prescaler_timer2_value = TIMER2_PRESCALER_DIV_BY_1,
-.postscaler_timer2_value = TIMER2_POSTSCALER_DIV_BY_1,
-.value_start_cnt = 0
-};
-
-int main() {
-    Std_ReturnType ret = (Std_ReturnType)0x00;
-     application_initialize();
-
-     motor_move_right(&motor);
-     while(1){
-         ret = ADC_StartConversion_Interrupt(&adc_0, adc_0.adc_channel);
-
-         ret = get_temperaturevalue(&lm35_res_celsius, lm35_res);
-
-         ret = cnvert_uint8_to_string(lm35_res_celsius,arr_val);
-         ret = send_4_bit_string_data_pos(&lcd_4bit, 1, 1, "Temperature = ");
-         ret = send_4_bit_string_data_pos(&lcd_4bit, 1, 15, arr_val);
-         ret = send_4_bit_char_data(&lcd_4bit,'C');
-
-         if(lm35_res_celsius < 25)
-         {
-             ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,0);
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is Off");
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "            ");
-         }
-
-         else if(lm35_res_celsius >= 25 && lm35_res_celsius < 40)
-         {
-             ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,25);
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "25% Capacity");
-         }
-
-         else if(lm35_res_celsius >= 40 && lm35_res_celsius < 50)
-         {
-             ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,50);
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "50% Capacity");
-         }
-         else if(lm35_res_celsius >= 50 && lm35_res_celsius < 60)
-         {
-             ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,75);
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "75% Capacity ");
-         }
-
-         else if(lm35_res_celsius >= 60)
-         {
-             ret = CCP_PWM_Set_Duty(&ccp_pwm_obj,100);
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 2, 1, "Fan Is On ");
-             ret = send_4_bit_string_data_pos(&lcd_4bit, 3, 1, "Full Capacity");
-         }
-         else{ }
-     }
-      return (0);
-}
-
-void application_initialize(void){
-    lcd_pins_4_initialize(&lcd_4bit);
-    motor_initialize(&motor);
-    adc_init(&adc_0);
-    CCP_Init(&ccp_pwm_obj);
-    Timer2_init(&timer2_obj);
-}
-
-void adc_interrupt(void){
-     Std_ReturnType ret = (Std_ReturnType)0x00;
-    ret = adc_getconversion_result(&adc_0,&lm35_res);
+        *temp_val = (adc_val * (5000 / (float)(pow - 1))) / 10;
+    }
+    return ret;
 }

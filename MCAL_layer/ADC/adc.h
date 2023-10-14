@@ -34,6 +34,7 @@
 #define ADC_RIGHT_RESULT_FORMAT()           (ADCON2bits.ADFM = 1)
 
 /* Section : Data Type Declarations */
+#define ADC_RESOLUTION                  0x0A
 
 #define ADC_AN0_ANALOG_FUNCTIONALITY    0x0E
 #define ADC_AN1_ANALOG_FUNCTIONALITY    0x0D

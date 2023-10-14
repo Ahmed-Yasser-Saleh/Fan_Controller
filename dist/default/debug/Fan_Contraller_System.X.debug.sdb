@@ -131,7 +131,7 @@ MOTOR_OFF 0
 MOTOR_ON 1
 ]
 "57
-[e E3121 . `uc
+[e E3120 . `uc
 ADC_CHANNEL_AN0 0
 ADC_CHANNEL_AN1 1
 ADC_CHANNEL_AN2 2
@@ -146,7 +146,7 @@ ADC_CHANNEL_AN10 10
 ADC_CHANNEL_AN11 11
 ADC_CHANNEL_AN12 12
 ]
-[e E3136 . `uc
+[e E3135 . `uc
 ADC_0_TAD 0
 ADC_2_TAD 1
 ADC_4_TAD 2
@@ -156,7 +156,7 @@ ADC_12_TAD 5
 ADC_16_TAD 6
 ADC_20_TAD 7
 ]
-[e E3146 . `uc
+[e E3145 . `uc
 ADC_CONVERSION_CLOCK_FOSC_DIV_2 0
 ADC_CONVERSION_CLOCK_FOSC_DIV_8 1
 ADC_CONVERSION_CLOCK_FOSC_DIV_32 2
@@ -165,17 +165,17 @@ ADC_CONVERSION_CLOCK_FOSC_DIV_4 4
 ADC_CONVERSION_CLOCK_FOSC_DIV_16 5
 ADC_CONVERSION_CLOCK_FOSC_DIV_64 6
 ]
-[e E3117 . `uc
+[e E3116 . `uc
 LOW_PRIORITY 0
 HIGH_PRIORITY 1
 ]
 "81
-[e E3206 . `uc
+[e E3209 . `uc
 TIMER2_PRESCALER_DIV_BY_1 0
 TIMER2_PRESCALER_DIV_BY_4 1
 TIMER2_PRESCALER_DIV_BY_16 2
 ]
-[e E3188 . `uc
+[e E3191 . `uc
 TIMER2_POSTSCALER_DIV_BY_1 0
 TIMER2_POSTSCALER_DIV_BY_2 1
 TIMER2_POSTSCALER_DIV_BY_3 2
@@ -273,6 +273,8 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 [v _lcd_8_bit_set_cursor lcd_8_bit_set_cursor `(uc  1 s 1 lcd_8_bit_set_cursor ]
 "338
 [v _cnvert_uint8_to_string cnvert_uint8_to_string `(uc  1 e 1 0 ]
+"15 F:\Embedded system\microcontraller interfacing\MPLAB PROJECTS\Fan_Contraller_System.X\ECU_layer/LM35_temp_sensor/lm35_temp_sensor.c
+[v _get_temperaturevalue get_temperaturevalue `(uc  1 e 1 0 ]
 "16 F:\Embedded system\microcontraller interfacing\MPLAB PROJECTS\Fan_Contraller_System.X\ECU_layer/Motor/ecu_motor.c
 [v _motor_initialize motor_initialize `(uc  1 e 1 0 ]
 "27
@@ -624,11 +626,14 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 "111 F:\Embedded system\microcontraller interfacing\MPLAB PROJECTS\Fan_Contraller_System.X\ECU_layer/LCD/ecu_lcd.c
 [v _send_4_bit_string_data_pos send_4_bit_string_data_pos `(uc  1 e 1 0 ]
 {
+"112
+[v send_4_bit_string_data_pos@ret ret `uc  1 a 1 41 ]
 [s S24 . 1 `uc 1 port 1 0 :3:0 
 `uc 1 pin 1 0 :3:3 
 `uc 1 direction 1 0 :1:6 
 `uc 1 logic 1 0 :1:7 
 ]
+"111
 [s S29 . 6 `S24 1 rs_lcd 1 0 `[4]S24 1 lcd_pin 4 1 `S24 1 en_lcd 1 5 ]
 [v send_4_bit_string_data_pos@lcd lcd `*.39CS29  1 p 2 35 ]
 [v send_4_bit_string_data_pos@row row `uc  1 p 1 37 ]
@@ -681,6 +686,20 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 [v motor_move_right@motor motor `*.39CS339  1 p 2 22 ]
 "36
 } 0
+"15 F:\Embedded system\microcontraller interfacing\MPLAB PROJECTS\Fan_Contraller_System.X\ECU_layer/LM35_temp_sensor/lm35_temp_sensor.c
+[v _get_temperaturevalue get_temperaturevalue `(uc  1 e 1 0 ]
+{
+"17
+[v get_temperaturevalue@pow pow `us  1 a 2 10 ]
+"18
+[v get_temperaturevalue@adc_resol adc_resol `uc  1 a 1 13 ]
+"16
+[v get_temperaturevalue@ret ret `uc  1 a 1 12 ]
+"15
+[v get_temperaturevalue@temp_val temp_val `*.39us  1 p 2 0 ]
+[v get_temperaturevalue@adc_val adc_val `us  1 p 2 2 ]
+"30
+} 0
 "338 F:\Embedded system\microcontraller interfacing\MPLAB PROJECTS\Fan_Contraller_System.X\ECU_layer/LCD/ecu_lcd.c
 [v _cnvert_uint8_to_string cnvert_uint8_to_string `(uc  1 e 1 0 ]
 {
@@ -688,21 +707,22 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 "340
 [v cnvert_uint8_to_string@Temp_String Temp_String `[4]uc  1 a 4 96 ]
 "341
-[v cnvert_uint8_to_string@DataCounter DataCounter `uc  1 a 1 101 ]
+[v cnvert_uint8_to_string@DataCounter DataCounter `uc  1 a 1 102 ]
+"339
+[v cnvert_uint8_to_string@ret ret `uc  1 a 1 101 ]
 "338
 [v cnvert_uint8_to_string@value value `uc  1 a 1 wreg ]
 [v cnvert_uint8_to_string@str str `*.39uc  1 p 2 94 ]
-"340
 [v cnvert_uint8_to_string@value value `uc  1 a 1 100 ]
 "363
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S2175 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S2187 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S2178 _IO_FILE 12 `S2175 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v sprintf@f f `S2178  1 a 12 82 ]
+[s S2190 _IO_FILE 12 `S2187 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S2190  1 a 12 82 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 80 ]
 "9
@@ -715,9 +735,9 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 {
 "1549
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 72 ]
-[s S2210 _IO_FILE 0 ]
+[s S2222 _IO_FILE 0 ]
 "1546
-[v vfprintf@fp fp `*.39S2210  1 p 2 66 ]
+[v vfprintf@fp fp `*.39S2222  1 p 2 66 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 68 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 70 ]
 "1569
@@ -725,14 +745,14 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 "1048
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S2228 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+[u S2240 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
 "1059
-[v vfpfcnvrt@convarg convarg `S2228  1 a 4 60 ]
+[v vfpfcnvrt@convarg convarg `S2240  1 a 4 60 ]
 "1050
 [v vfpfcnvrt@cp cp `*.32uc  1 a 2 64 ]
-[s S2210 _IO_FILE 0 ]
+[s S2222 _IO_FILE 0 ]
 "1048
-[v vfpfcnvrt@fp fp `*.39S2210  1 p 2 52 ]
+[v vfpfcnvrt@fp fp `*.39S2222  1 p 2 52 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 54 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 56 ]
 "1543
@@ -746,9 +766,9 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 [v dtoa@p p `i  1 a 2 45 ]
 "472
 [v dtoa@s s `uc  1 a 1 51 ]
-[s S2210 _IO_FILE 0 ]
+[s S2222 _IO_FILE 0 ]
 "470
-[v dtoa@fp fp `*.39S2210  1 p 2 39 ]
+[v dtoa@fp fp `*.39S2222  1 p 2 39 ]
 [v dtoa@d d `i  1 p 2 41 ]
 "527
 } 0
@@ -758,9 +778,9 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 "154
 [v pad@w w `i  1 a 2 37 ]
 [v pad@i i `i  1 a 2 35 ]
-[s S2210 _IO_FILE 0 ]
+[s S2222 _IO_FILE 0 ]
 "152
-[v pad@fp fp `*.39S2210  1 p 2 28 ]
+[v pad@fp fp `*.39S2222  1 p 2 28 ]
 [v pad@buf buf `*.39uc  1 p 2 30 ]
 [v pad@p p `i  1 p 2 32 ]
 "183
@@ -774,18 +794,18 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 [v fputs@c c `uc  1 a 1 25 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 21 ]
-[u S2175 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S2178 _IO_FILE 12 `S2175 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputs@fp fp `*.39S2178  1 p 2 23 ]
+[u S2187 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2190 _IO_FILE 12 `S2187 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputs@fp fp `*.39S2190  1 p 2 23 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 12 ]
-[u S2175 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S2178 _IO_FILE 12 `S2175 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputc@fp fp `*.39S2178  1 p 2 14 ]
+[u S2187 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2190 _IO_FILE 12 `S2187 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.39S2190  1 p 2 14 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\putch.c
@@ -1099,46 +1119,46 @@ TIMER2_POSTSCALER_DIV_BY_16 15
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S2033 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S2045 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S2038 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S2041 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2033 1 fAsBytes 4 0 `S2038 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S2041  1 a 4 45 ]
+[s S2050 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S2053 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2045 1 fAsBytes 4 0 `S2050 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S2053  1 a 4 70 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 40 ]
-[s S2109 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 65 ]
+[s S2121 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S2112 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2109 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2112  1 a 2 49 ]
+[u S2124 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2121 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2124  1 a 2 74 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 44 ]
+[v ___flmul@bexp bexp `uc  1 a 1 69 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 39 ]
+[v ___flmul@aexp aexp `uc  1 a 1 64 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 38 ]
+[v ___flmul@sign sign `uc  1 a 1 63 ]
 "8
-[v ___flmul@b b `d  1 p 4 26 ]
-[v ___flmul@a a `d  1 p 4 30 ]
+[v ___flmul@b b `d  1 p 4 51 ]
+[v ___flmul@a a `d  1 p 4 55 ]
 "205
 } 0
 "11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
 "21
-[v ___fldiv@grs grs `ul  1 a 4 70 ]
+[v ___fldiv@grs grs `ul  1 a 4 45 ]
 "22
-[v ___fldiv@rem rem `ul  1 a 4 63 ]
+[v ___fldiv@rem rem `ul  1 a 4 38 ]
 "20
-[v ___fldiv@new_exp new_exp `s  1 a 2 68 ]
+[v ___fldiv@new_exp new_exp `s  1 a 2 43 ]
 "19
-[v ___fldiv@aexp aexp `uc  1 a 1 75 ]
+[v ___fldiv@aexp aexp `uc  1 a 1 50 ]
 "18
-[v ___fldiv@bexp bexp `uc  1 a 1 74 ]
+[v ___fldiv@bexp bexp `uc  1 a 1 49 ]
 "16
-[v ___fldiv@sign sign `uc  1 a 1 67 ]
+[v ___fldiv@sign sign `uc  1 a 1 42 ]
 "11
-[v ___fldiv@b b `d  1 p 4 51 ]
-[v ___fldiv@a a `d  1 p 4 55 ]
+[v ___fldiv@b b `d  1 p 4 26 ]
+[v ___fldiv@a a `d  1 p 4 30 ]
 "185
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c

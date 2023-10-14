@@ -15,8 +15,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n E3057 . ADC_CONVERSION_CLOCK_FOSC_DIV_2 ADC_CONVERSION_CLOCK_FOSC_DIV_8 ADC_CONVERSION_CLOCK_FOSC_DIV_32 ADC_CONVERSION_CLOCK_FOSC_DIV_FRC ADC_CONVERSION_CLOCK_FOSC_DIV_4 ADC_CONVERSION_CLOCK_FOSC_DIV_16 ADC_CONVERSION_CLOCK_FOSC_DIV_64  ]
 [c E2968 0 1 .. ]
 [n E2968 . LOW_PRIORITY HIGH_PRIORITY  ]
-"91 MCAL_layer/ADC/adc.h
-[; ;MCAL_layer/ADC/adc.h: 91: typedef struct {
+"92 MCAL_layer/ADC/adc.h
+[; ;MCAL_layer/ADC/adc.h: 92: typedef struct {
 [s S274 `*F3068 1 `S273 1 `E3032 1 `E3047 1 `E3057 1 `E2968 1 :1 `uc 1 :1 `uc 1 ]
 [n S274 . internalfun_interrupt adc_pin_confg adc_channel adc_acquisition_time adc_conversion_clock priority result_format voltage_reference ]
 "4535 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\../proc/pic18f4620.h
@@ -118,8 +118,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S93 . . . ]
 "2519
 [v _PIE1bits `VS93 ~T0 @X0 0 e@3997 ]
-"107 MCAL_layer/ADC/adc.h
-[; ;MCAL_layer/ADC/adc.h: 107: Std_ReturnType adc_getconversion_result(adc_confg_t *adc_confg, uint16 *conversion_result);
+"108 MCAL_layer/ADC/adc.h
+[; ;MCAL_layer/ADC/adc.h: 108: Std_ReturnType adc_getconversion_result(adc_confg_t *adc_confg, uint16 *conversion_result);
 [v _adc_getconversion_result `(uc ~T0 @X0 0 ef2`*S274`*us ]
 "4662 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\../proc/pic18f4620.h
 [v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]

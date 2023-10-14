@@ -9,6 +9,11 @@
           <itemPath>ECU_layer/LCD/ecu_lcd.h</itemPath>
           <itemPath>ECU_layer/LCD/ecu_lcd_confg.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="LM35_temp_sensor"
+                       displayName="LM35_temp_sensor"
+                       projectFiles="true">
+          <itemPath>ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="Motor" displayName="Motor" projectFiles="true">
           <itemPath>ECU_layer/Motor/ecu_motor.h</itemPath>
           <itemPath>ECU_layer/Motor/ecu_motor_confg.h</itemPath>
@@ -52,6 +57,11 @@
       <logicalFolder name="ECU_layer" displayName="ECU_layer" projectFiles="true">
         <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
           <itemPath>ECU_layer/LCD/ecu_lcd.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="LM35_temp_sensor"
+                       displayName="LM35_temp_sensor"
+                       projectFiles="true">
+          <itemPath>ECU_layer/LM35_temp_sensor/lm35_temp_sensor.c</itemPath>
         </logicalFolder>
         <logicalFolder name="Motor" displayName="Motor" projectFiles="true">
           <itemPath>ECU_layer/Motor/ecu_motor.c</itemPath>

@@ -4826,7 +4826,7 @@ Std_ReturnType gpio_port_toggle_logic (Port_Index_t port);
 
 # 1 "MCAL_layer/ADC/../Interrupt/interrupt_internal.h" 1
 # 17 "MCAL_layer/ADC/adc.h" 2
-# 54 "MCAL_layer/ADC/adc.h"
+# 55 "MCAL_layer/ADC/adc.h"
 typedef enum{
     ADC_CHANNEL_AN0 = 0,
     ADC_CHANNEL_AN1,

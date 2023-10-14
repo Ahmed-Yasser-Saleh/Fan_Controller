@@ -11,6 +11,7 @@
 /* Section : Includes */
 #include "ECU_layer/LCD/ecu_lcd.h"
 #include "ECU_layer/Motor/ecu_motor.h"
+#include "ECU_layer/LM35_temp_sensor/lm35_temp_sensor.h"
 /* Section : Macro Declarations */
 #define _XTAL_FREQ 4000000UL
 
